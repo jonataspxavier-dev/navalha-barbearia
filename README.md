@@ -47,22 +47,7 @@ python -m http.server 8080
 
 Depois acesse `http://localhost:8080`.
 
-## Como publicar no GitHub Pages
 
-1. No GitHub, abra o repositório e vá em **Settings → Pages**.
-2. Em "Build and deployment", selecione **Deploy from a branch**.
-3. Escolha a branch `main` e a pasta `/ (root)`.
-4. Salve. O site ficará disponível em alguns minutos em:
-   `https://<seu-usuário>.github.io/<nome-do-repo>/`
-
-> O GitHub Pages gratuito só funciona com repositórios **públicos**. Se o repositório estiver privado, torne-o público antes (Settings → General → Danger Zone → Change visibility) ou use um plano pago do GitHub que suporte Pages em repositórios privados.
-
-Alternativamente, pelo GitHub CLI:
-
-```bash
-gh repo edit <seu-usuário>/<nome-do-repo> --visibility public
-gh api -X POST repos/<seu-usuário>/<nome-do-repo>/pages -f "source[branch]=main" -f "source[path]=/"
-```
 
 ## Link do deploy
 
