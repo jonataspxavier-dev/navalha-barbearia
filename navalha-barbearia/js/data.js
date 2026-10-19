@@ -10,12 +10,12 @@ const SERVICES = [
 ];
 
 const GALLERY = [
-  { id: 1, src: 'https://picsum.photos/id/1012/700/525?grayscale', alt: 'Cliente recebendo corte de cabelo na cadeira da barbearia' },
-  { id: 2, src: 'https://picsum.photos/id/1027/700/525?grayscale', alt: 'Barbeiro finalizando a barba de um cliente' },
-  { id: 3, src: 'https://picsum.photos/id/1025/700/525?grayscale', alt: 'Ambiente interno da barbearia com cadeiras e espelhos' },
-  { id: 4, src: 'https://picsum.photos/id/1074/700/525?grayscale', alt: 'Ferramentas de barbeiro organizadas no balcão' },
-  { id: 5, src: 'https://picsum.photos/id/1062/700/525?grayscale', alt: 'Close do acabamento de um corte degradê' },
-  { id: 6, src: 'https://picsum.photos/id/1081/700/525?grayscale', alt: 'Fachada da barbearia Navalha' },
+  { id: 1, src: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=700&h=525&q=75&auto=format&fit=crop', alt: 'Barbeiro finalizando o corte de um cliente com secador' },
+  { id: 2, src: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=700&h=525&q=75&auto=format&fit=crop', alt: 'Barba sendo aparada com tesoura' },
+  { id: 3, src: 'https://images.unsplash.com/photo-1536520002442-39764a41e987?w=700&h=525&q=75&auto=format&fit=crop', alt: 'Ambiente interno da barbearia com fileira de cadeiras e espelhos' },
+  { id: 4, src: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=700&h=525&q=75&auto=format&fit=crop', alt: 'Ferramentas de barbeiro organizadas no balcão: máquinas, tesoura e pente' },
+  { id: 5, src: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700&h=525&q=75&auto=format&fit=crop', alt: 'Close do acabamento de um corte degradê' },
+  { id: 6, src: 'https://images.unsplash.com/photo-1621645582931-d1d3e6564943?w=700&h=525&q=75&auto=format&fit=crop', alt: 'Cadeira clássica de barbeiro em couro e cromo' },
 ];
 
 const TESTIMONIALS = [

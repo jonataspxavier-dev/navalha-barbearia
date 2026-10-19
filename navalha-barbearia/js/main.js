@@ -70,6 +70,13 @@
     const targets = document.querySelectorAll('.section-title, .service-card, .gallery__item, .booking__form, .hours-map__grid > div');
     targets.forEach((el) => el.classList.add('reveal'));
 
+    const staggerGroups = document.querySelectorAll('.services__grid, .gallery__grid');
+    staggerGroups.forEach((group) => {
+      Array.from(group.children).forEach((child, index) => {
+        child.style.transitionDelay = `${Math.min(index * 80, 400)}ms`;
+      });
+    });
+
     if (!('IntersectionObserver' in window)) {
       targets.forEach((el) => el.classList.add('is-visible'));
       return;
@@ -90,9 +97,22 @@
     targets.forEach((el) => observer.observe(el));
   }
 
+  function setupHeaderScrollShadow() {
+    const header = document.getElementById('header');
+    if (!header) return;
+
+    function onScroll() {
+      header.classList.toggle('is-scrolled', window.scrollY > 10);
+    }
+
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   renderServices();
   populateServiceSelect();
   renderHours();
   renderFooterYear();
   setupScrollReveal();
+  setupHeaderScrollShadow();
 })();

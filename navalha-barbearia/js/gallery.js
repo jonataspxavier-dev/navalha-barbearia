@@ -31,7 +31,6 @@
     lightbox.setAttribute('role', 'dialog');
     lightbox.setAttribute('aria-modal', 'true');
     lightbox.setAttribute('aria-label', 'Visualização de imagem da galeria');
-    lightbox.hidden = true;
     lightbox.innerHTML = `
       <button type="button" class="lightbox__close" aria-label="Fechar">&times;</button>
       <button type="button" class="lightbox__prev" aria-label="Foto anterior">&#8249;</button>
@@ -60,13 +59,13 @@
   function openLightbox(index, trigger) {
     triggerEl = trigger;
     showImage(index);
-    lightbox.hidden = false;
+    lightbox.classList.add('is-open');
     lightbox.querySelector('.lightbox__close').focus();
     document.body.style.overflow = 'hidden';
   }
 
   function closeLightbox() {
-    lightbox.hidden = true;
+    lightbox.classList.remove('is-open');
     document.body.style.overflow = '';
     if (triggerEl) triggerEl.focus();
   }
