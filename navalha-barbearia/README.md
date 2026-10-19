@@ -65,4 +65,4 @@ gh api -X POST repos/<seu-usuário>/<nome-do-repo>/pages -f "source[branch]=main
 
 ## Link do deploy
 
-_Adicione aqui a URL do GitHub Pages depois de publicar._
+🔗 [jonataspxavier-dev.github.io/Barber-Project](https://jonataspxavier-dev.github.io/Barber-Project/)
