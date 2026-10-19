@@ -498,7 +498,8 @@ section {
   min-width: 0;
 }
 
-.form-group label {
+.form-group label,
+.form-group > span:first-child {
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -514,10 +515,116 @@ section {
   color: var(--color-text);
 }
 
-.form-row {
+/* ===== Datepicker ===== */
+.datepicker {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  background-color: var(--color-bg);
+}
+
+.datepicker__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+}
+
+.datepicker__month {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.datepicker__nav {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: background-color var(--transition);
+}
+
+.datepicker__nav:hover:not(:disabled) {
+  background-color: var(--color-border);
+}
+
+.datepicker__nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.datepicker__weekdays,
+.datepicker__days {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-sm);
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  text-align: center;
+}
+
+.datepicker__weekdays {
+  margin-bottom: 4px;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+.datepicker__day {
+  aspect-ratio: 1;
+  min-width: 0;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.datepicker__day--empty {
+  pointer-events: none;
+}
+
+.datepicker__day:not(.is-disabled):not(.is-selected):hover {
+  background-color: var(--color-border);
+}
+
+.datepicker__day.is-selected {
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+  font-weight: 700;
+}
+
+.datepicker__day.is-disabled {
+  color: var(--color-text-muted);
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ===== Horários ===== */
+.timeslots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timeslots__hint {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.timeslot {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  background-color: var(--color-bg);
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.timeslot:hover {
+  border-color: var(--color-primary);
+}
+
+.timeslot.is-selected {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+  font-weight: 600;
 }
 
 .form-error {

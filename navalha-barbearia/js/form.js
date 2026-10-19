@@ -14,7 +14,6 @@
   const successBox = document.getElementById('formSuccess');
 
   const todayISO = new Date().toISOString().split('T')[0];
-  dateInput.min = todayISO;
 
   function setError(id, message) {
     const el = document.getElementById(id);
@@ -149,6 +148,5 @@
 
     successBox.hidden = false;
     form.reset();
-    dateInput.min = todayISO;
   });
 })();

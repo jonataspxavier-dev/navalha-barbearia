@@ -10,17 +10,17 @@ Landing page responsiva para uma barbearia **fictícia**, construída como peça
 - Header fixo com menu hambúrguer no mobile
 - Hero com chamada para agendamento
 - Serviços renderizados a partir de `js/data.js`
-- Galeria com lightbox acessível (teclado, setas, ESC)
-- Carrossel de depoimentos com autoplay e pausa no hover
-- Formulário de agendamento com máscara de telefone, validação completa (sem datas passadas, sem horários fora do expediente) e gravação em `localStorage`
+- Galeria com lightbox acessível (teclado, setas, ESC) com fotos reais de barbearia
+- Carrossel de depoimentos com autoplay, pausa no hover e transição em slide
+- Formulário de agendamento com máscara de telefone, calendário customizado (bloqueia datas passadas e dias fechados) e grade de horários disponíveis conforme o expediente do dia, com gravação em `localStorage`
 - Horário de funcionamento com status "Aberto agora / Fechado" calculado em tempo real
-- Botão flutuante de WhatsApp
+- Botão flutuante de WhatsApp com pulso sutil
 - Modo escuro com preferência salva (respeita `prefers-color-scheme`)
-- Animações on-scroll com `IntersectionObserver`
+- Animações on-scroll com `IntersectionObserver`, entrada animada do hero e header com sombra ao rolar
 
 ## Tecnologias
 
-HTML5 semântico, CSS3 (variáveis, Flexbox, Grid) e JavaScript ES6+. Nenhuma dependência externa além de imagens de placeholder (picsum.photos).
+HTML5 semântico, CSS3 (variáveis, Flexbox, Grid) e JavaScript ES6+. Nenhuma dependência externa além de imagens (fotos de barbearia via Unsplash).
 
 ## Qualidade
 

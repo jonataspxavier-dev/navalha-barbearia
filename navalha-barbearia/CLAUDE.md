@@ -17,7 +17,7 @@ Landing page de portfólio para barbearia fictícia. Ver `../Plano.md` para o es
 ```
 index.html
 css/{reset,variables,style}.css
-js/{data,menu,gallery,carousel,form,theme,main}.js
+js/{data,menu,gallery,carousel,datepicker,form,theme,main}.js
 assets/img/
 ```
 

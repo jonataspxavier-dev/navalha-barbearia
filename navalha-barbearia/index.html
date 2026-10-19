@@ -105,18 +105,30 @@
             <span class="form-error" id="serviceError"></span>
           </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="date">Data</label>
-              <input type="date" id="date" name="date" required />
-              <span class="form-error" id="dateError"></span>
+          <div class="form-group">
+            <span id="dateLabel">Data</span>
+            <div class="datepicker" id="datePicker" role="group" aria-labelledby="dateLabel">
+              <div class="datepicker__header">
+                <button type="button" class="datepicker__nav" id="prevMonth" aria-label="Mês anterior">&#8249;</button>
+                <span class="datepicker__month" id="currentMonth" aria-live="polite"></span>
+                <button type="button" class="datepicker__nav" id="nextMonth" aria-label="Próximo mês">&#8250;</button>
+              </div>
+              <div class="datepicker__weekdays" aria-hidden="true">
+                <span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span>
+              </div>
+              <div class="datepicker__days" id="datepickerDays"></div>
             </div>
+            <input type="hidden" id="date" name="date" required />
+            <span class="form-error" id="dateError"></span>
+          </div>
 
-            <div class="form-group">
-              <label for="time">Horário</label>
-              <input type="time" id="time" name="time" required />
-              <span class="form-error" id="timeError"></span>
+          <div class="form-group">
+            <span id="timeLabel">Horário</span>
+            <div class="timeslots" id="timeSlots" role="group" aria-labelledby="timeLabel">
+              <p class="timeslots__hint">Selecione uma data primeiro.</p>
             </div>
+            <input type="hidden" id="time" name="time" required />
+            <span class="form-error" id="timeError"></span>
           </div>
 
           <button type="submit" class="btn btn--primary">Confirmar agendamento</button>
@@ -165,6 +177,7 @@
   <script src="js/menu.js" defer></script>
   <script src="js/gallery.js" defer></script>
   <script src="js/carousel.js" defer></script>
+  <script src="js/datepicker.js" defer></script>
   <script src="js/form.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
