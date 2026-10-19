@@ -93,6 +93,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-md);
 }
 
 .logo {
@@ -185,6 +186,24 @@ section {
 
 .hamburger[aria-expanded='true'] span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .header__inner {
+    gap: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.15rem;
+  }
+
+  .header__actions {
+    gap: 0.4rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -419,6 +438,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  min-width: 0;
 }
 
 .form-group label {
@@ -428,6 +448,8 @@ section {
 
 .form-group input,
 .form-group select {
+  width: 100%;
+  min-width: 0;
   padding: 0.65rem 0.8rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
