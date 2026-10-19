@@ -24,11 +24,13 @@ HTML5 semântico, CSS3 (variáveis, Flexbox, Grid) e JavaScript ES6+. Nenhuma de
 
 ## Qualidade
 
-Auditado com [Lighthouse](https://developer.chrome.com/docs/lighthouse/) via `npx lighthouse`:
+Auditado com [Lighthouse](https://developer.chrome.com/docs/lighthouse/) direto no site publicado:
+
+![Lighthouse: Performance 92, Acessibilidade 100, Boas Práticas 100, SEO 100](assets/img/lighthouse-score.png)
 
 | Categoria       | Nota |
 | --------------- | ---- |
-| Performance     | 100  |
+| Performance     | 92   |
 | Acessibilidade  | 100  |
 | Boas Práticas   | 100  |
 | SEO             | 100  |
