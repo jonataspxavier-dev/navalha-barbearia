@@ -377,18 +377,29 @@ section {
 .testimonials__dots {
   display: flex;
   justify-content: center;
-  gap: var(--space-xs);
+  gap: 4px;
   margin-top: var(--space-md);
 }
 
 .testimonials__dots button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials__dots button::before {
+  content: '';
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: var(--color-border);
+  transition: background-color var(--transition);
 }
 
-.testimonials__dots button.is-active {
+.testimonials__dots button.is-active::before {
   background-color: var(--color-primary);
 }
 
@@ -528,6 +539,7 @@ section {
 
 [data-theme='dark'] .footer {
   background-color: #0c0a08;
+  color: var(--color-text);
 }
 
 /* ===== Animações on-scroll ===== */
