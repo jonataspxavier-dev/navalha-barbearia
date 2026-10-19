@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navalha Barbearia — Agende seu horário online</title>
+  <meta name="description" content="Barbearia Navalha: corte, barba e tratamentos premium. Agende seu horário online em poucos cliques." />
+  <meta name="theme-color" content="#1a1512" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Navalha Barbearia" />
+  <meta property="og:description" content="Corte, barba e tratamentos premium. Agende seu horário online." />
+  <meta property="og:image" content="https://picsum.photos/id/1080/1200/630" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Pular para o conteúdo</a>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">Navalha<span>Barbearia</span></a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#horario">Horário</a></li>
+          <li><a href="#agendar" class="btn btn--primary">Agendar</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar modo escuro" aria-pressed="false">🌙</button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero__content">
+        <h1 class="hero__title">Estilo e precisão em cada corte</h1>
+        <p class="hero__subtitle">Barbearia premium com atendimento agendado, sem fila de espera.</p>
+        <a href="#agendar" class="btn btn--primary">Agendar horário</a>
+      </div>
+    </section>
+
+    <section id="servicos" class="services">
+      <div class="container">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="services__grid" id="servicesGrid">
+          <p class="placeholder-note">Carregando serviços…</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="gallery">
+      <div class="container">
+        <h2 class="section-title">Galeria</h2>
+        <div class="gallery__grid" id="galleryGrid">
+          <p class="placeholder-note">Carregando galeria…</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Depoimentos</h2>
+        <div class="testimonials__track" id="testimonialsTrack" aria-live="polite">
+          <p class="placeholder-note">Carregando depoimentos…</p>
+        </div>
+        <div class="testimonials__dots" id="testimonialsDots"></div>
+      </div>
+    </section>
+
+    <section id="agendar" class="booking">
+      <div class="container">
+        <h2 class="section-title">Agende seu horário</h2>
+        <form class="booking__form" id="bookingForm" novalidate>
+          <div class="form-group">
+            <label for="name">Nome completo</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+            <span class="form-error" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required autocomplete="tel" />
+            <span class="form-error" id="phoneError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Serviço</label>
+            <select id="service" name="service" required>
+              <option value="">Selecione…</option>
+            </select>
+            <span class="form-error" id="serviceError"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Data</label>
+              <input type="date" id="date" name="date" required />
+              <span class="form-error" id="dateError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="time">Horário</label>
+              <input type="time" id="time" name="time" required />
+              <span class="form-error" id="timeError"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Confirmar agendamento</button>
+          <p class="form-success" id="formSuccess" hidden>Agendamento confirmado! Entraremos em contato para confirmar.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="horario" class="hours-map">
+      <div class="container hours-map__grid">
+        <div>
+          <h2 class="section-title" style="text-align: left;">Horário de funcionamento</h2>
+          <p class="status-badge" id="openStatus">Verificando…</p>
+          <ul class="hours-list" id="hoursList"></ul>
+        </div>
+        <div>
+          <h2 class="section-title" style="text-align: left;">Onde estamos</h2>
+          <iframe
+            class="map-frame"
+            title="Localização da Navalha Barbearia"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-46.6400%2C-23.5700%2C-46.6200%2C-23.5500&layer=mapnik"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a
+    href="https://wa.me/5500000000000"
+    class="whatsapp-float"
+    id="whatsappBtn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Fale com a gente no WhatsApp"
+  >💬</a>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Navalha Barbearia — Projeto fictício de portfólio.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/theme.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <script src="js/form.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
