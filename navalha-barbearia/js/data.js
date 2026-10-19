@@ -10,12 +10,12 @@ const SERVICES = [
 ];
 
 const GALLERY = [
-  { id: 1, src: 'https://picsum.photos/id/1012/700/525', alt: 'Cliente recebendo corte de cabelo na cadeira da barbearia' },
-  { id: 2, src: 'https://picsum.photos/id/1027/700/525', alt: 'Barbeiro finalizando a barba de um cliente' },
-  { id: 3, src: 'https://picsum.photos/id/1025/700/525', alt: 'Ambiente interno da barbearia com cadeiras e espelhos' },
-  { id: 4, src: 'https://picsum.photos/id/1074/700/525', alt: 'Ferramentas de barbeiro organizadas no balcão' },
-  { id: 5, src: 'https://picsum.photos/id/1062/700/525', alt: 'Close do acabamento de um corte degradê' },
-  { id: 6, src: 'https://picsum.photos/id/1081/700/525', alt: 'Fachada da barbearia Navalha' },
+  { id: 1, src: 'https://picsum.photos/id/1012/700/525?grayscale', alt: 'Cliente recebendo corte de cabelo na cadeira da barbearia' },
+  { id: 2, src: 'https://picsum.photos/id/1027/700/525?grayscale', alt: 'Barbeiro finalizando a barba de um cliente' },
+  { id: 3, src: 'https://picsum.photos/id/1025/700/525?grayscale', alt: 'Ambiente interno da barbearia com cadeiras e espelhos' },
+  { id: 4, src: 'https://picsum.photos/id/1074/700/525?grayscale', alt: 'Ferramentas de barbeiro organizadas no balcão' },
+  { id: 5, src: 'https://picsum.photos/id/1062/700/525?grayscale', alt: 'Close do acabamento de um corte degradê' },
+  { id: 6, src: 'https://picsum.photos/id/1081/700/525?grayscale', alt: 'Fachada da barbearia Navalha' },
 ];
 
 const TESTIMONIALS = [
