@@ -40,7 +40,6 @@ Também verificado manualmente: navegação só por teclado, skip link, foco vis
 Qualquer servidor estático funciona. Por exemplo, com Python:
 
 ```bash
-cd navalha-barbearia
 python -m http.server 8080
 ```
 
@@ -52,7 +51,7 @@ Depois acesse `http://localhost:8080`.
 2. Em "Build and deployment", selecione **Deploy from a branch**.
 3. Escolha a branch `main` e a pasta `/ (root)`.
 4. Salve. O site ficará disponível em alguns minutos em:
-   `https://<seu-usuário>.github.io/<nome-do-repo>/navalha-barbearia/`
+   `https://<seu-usuário>.github.io/<nome-do-repo>/`
 
 > O GitHub Pages gratuito só funciona com repositórios **públicos**. Se o repositório estiver privado, torne-o público antes (Settings → General → Danger Zone → Change visibility) ou use um plano pago do GitHub que suporte Pages em repositórios privados.
 
@@ -65,4 +64,4 @@ gh api -X POST repos/<seu-usuário>/<nome-do-repo>/pages -f "source[branch]=main
 
 ## Link do deploy
 
-🔗 [jonataspxavier-dev.github.io/Barber-Project](https://jonataspxavier-dev.github.io/Barber-Project/)
+🔗 [jonataspxavier-dev.github.io/navalha-barbearia](https://jonataspxavier-dev.github.io/navalha-barbearia/)

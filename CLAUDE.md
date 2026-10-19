@@ -1,6 +1,6 @@
 # Navalha Barbearia — regras do projeto
 
-Landing page de portfólio para barbearia fictícia. Ver `../Plano.md` para o escopo completo e as fases.
+Landing page de portfólio para barbearia fictícia. Ver `Plano.md` para o escopo completo e as fases.
 
 ## Regras fixas
 

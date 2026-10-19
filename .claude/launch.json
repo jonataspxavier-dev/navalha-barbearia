@@ -4,7 +4,7 @@
     {
       "name": "navalha-static",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8099", "--directory", "navalha-barbearia"],
+      "runtimeArgs": ["-m", "http.server", "8099"],
       "port": 8099
     }
   ]
