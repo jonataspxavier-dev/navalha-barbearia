@@ -13,7 +13,11 @@
   const timeInput = document.getElementById('time');
   const successBox = document.getElementById('formSuccess');
 
-  const todayISO = new Date().toISOString().split('T')[0];
+  function getTodayISO() {
+    const now = new Date();
+    const pad = (n) => String(n).padStart(2, '0');
+    return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+  }
 
   function setError(id, message) {
     const el = document.getElementById(id);
@@ -36,11 +40,6 @@
     const [year, month, day] = dateValue.split('-').map(Number);
     const weekday = new Date(year, month - 1, day).getDay();
     return BUSINESS_HOURS.find((entry) => entry.weekday === weekday) || null;
-  }
-
-  function timeToMinutes(value) {
-    const [hours, minutes] = value.split(':').map(Number);
-    return hours * 60 + minutes;
   }
 
   function validateName() {
@@ -78,7 +77,7 @@
       setError('dateError', 'Escolha uma data.');
       return false;
     }
-    if (value < todayISO) {
+    if (value < getTodayISO()) {
       setError('dateError', 'A data não pode estar no passado.');
       return false;
     }

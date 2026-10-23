@@ -13,8 +13,8 @@
     track.innerHTML = TESTIMONIALS.map(
       (item, index) => `
         <blockquote class="testimonial${index === 0 ? ' is-active' : ''}" data-index="${index}">
-          <p class="testimonial__quote">“${item.quote}”</p>
-          <footer class="testimonial__author">${item.author}</footer>
+          <p class="testimonial__quote">“${escapeHTML(item.quote)}”</p>
+          <footer class="testimonial__author">${escapeHTML(item.author)}</footer>
         </blockquote>
       `
     ).join('');
@@ -45,7 +45,10 @@
     goTo(currentIndex + 1);
   }
 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   function startAutoplay() {
+    if (prefersReducedMotion) return;
     stopAutoplay();
     timer = setInterval(next, AUTOPLAY_DELAY);
   }

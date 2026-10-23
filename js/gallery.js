@@ -9,15 +9,16 @@
   let lightbox = null;
 
   function renderGrid() {
-    grid.innerHTML = GALLERY.map(
-      (item, index) => `
+    grid.innerHTML = GALLERY.map((item, index) => {
+      const alt = escapeHTML(item.alt);
+      return `
         <div class="gallery__item">
-          <button type="button" data-index="${index}" aria-label="Ampliar foto: ${item.alt}">
-            <img src="${item.src}" alt="${item.alt}" loading="lazy" width="700" height="525" />
+          <button type="button" data-index="${index}" aria-label="Ampliar foto: ${alt}">
+            <img src="${escapeHTML(item.src)}" alt="${alt}" loading="lazy" width="700" height="525" />
           </button>
         </div>
-      `
-    ).join('');
+      `;
+    }).join('');
 
     grid.querySelectorAll('button[data-index]').forEach((btn) => {
       btn.addEventListener('click', () => openLightbox(Number(btn.dataset.index), btn));

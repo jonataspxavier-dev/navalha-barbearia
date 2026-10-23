@@ -25,6 +25,21 @@ const TESTIMONIALS = [
   { id: 4, quote: 'Faço a barba lá há meses, nunca decepcionou.', author: 'Thiago A.' },
 ];
 
+function timeToMinutes(value) {
+  const [hours, minutes] = value.split(':').map(Number);
+  return hours * 60 + minutes;
+}
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, (char) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  }[char]));
+}
+
 /* 0 = Domingo ... 6 = Sábado. open/close em minutos desde 00:00, null = fechado */
 const BUSINESS_HOURS = [
   { day: 'Domingo', weekday: 0, open: null, close: null },

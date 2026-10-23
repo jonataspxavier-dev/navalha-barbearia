@@ -112,10 +112,8 @@
       return;
     }
 
-    const [openH, openM] = hours.open.split(':').map(Number);
-    const [closeH, closeM] = hours.close.split(':').map(Number);
-    const openMinutes = openH * 60 + openM;
-    const closeMinutes = closeH * 60 + closeM;
+    const openMinutes = timeToMinutes(hours.open);
+    const closeMinutes = timeToMinutes(hours.close);
 
     const isToday = isSameDay(selectedDate, today);
     const nowMinutes = new Date().getHours() * 60 + new Date().getMinutes();

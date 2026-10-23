@@ -9,10 +9,10 @@
       (service) => `
         <article class="service-card">
           <div class="service-card__header">
-            <h3>${service.name}</h3>
+            <h3>${escapeHTML(service.name)}</h3>
             <span class="service-card__price">R$ ${service.price}</span>
           </div>
-          <p>${service.description}</p>
+          <p>${escapeHTML(service.description)}</p>
           <p class="service-card__meta">${service.duration} min</p>
         </article>
       `
@@ -29,11 +29,6 @@
       option.textContent = `${service.name} — R$ ${service.price} (${service.duration} min)`;
       select.appendChild(option);
     });
-  }
-
-  function timeToMinutes(value) {
-    const [hours, minutes] = value.split(':').map(Number);
-    return hours * 60 + minutes;
   }
 
   function renderHours() {
